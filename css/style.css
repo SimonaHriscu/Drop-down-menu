@@ -16,6 +16,7 @@
     background-position: center;
 }
 
+/*###############Mobile < 600px#####################*/
 @media only screen and (max-width: 600px) {
    /* Content */
     .main{
@@ -104,7 +105,7 @@
 .sub-menu1,
 .sub-menu2,
 .sub-menu3{
-     width: 40vw;
+    width: 40vw;
     height: 10vh;
     /* background-color: red;
     display: flex;
@@ -193,6 +194,128 @@ a{
 }
 }
 
+
+/*############### 600px- 992px ###################*/
+@media screen and (min-width:600px) and (max-width:992px) {
+    .main{
+        width: 100vw;
+        height: 100vh;
+        background-color: #000839 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    header{
+        width: 80vw;
+        height: 10vh;
+        background-color: #ffa41bcc;
+        display: flex;
+        align-items: center;
+    }
+    .content{
+        width: 80vw;
+        height: 80vh;
+        background-color: #005082c9;
+    }
+    /* The main MENU */
+    
+    header ul{
+        width: 45vw;
+        height: 5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        align-content: flex-end;
+    }
+    /* The MENU elements */
+    .menu-list{
+        list-style: none;
+        width: 15vw;
+        height: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    /* The first SubMENU */
+    .sub-menu1,
+    .sub-menu2,
+    .sub-menu3{
+        width: 15vw;
+        height: 12vh;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        display: none;
+    }
+    /* Hover over the MENU */
+    .menu-list:first-child:hover .sub-menu1,
+    .menu-list:nth-child(2):hover .sub-menu2,
+    .menu-list:last-child:hover .sub-menu3{
+        /* width: 7vw;
+        height: 12vh; */
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;  
+        animation: drop-down 1s normal both;
+    }
+    
+    /* Drop-down animation */
+    @keyframes drop-down{
+        0%{
+           top:7vh;
+           height: 0vh;
+           opacity: 0;
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            top:10vh;
+            height: 12vh;
+           opacity: 1;
+        }
+    }
+    
+    /* The subMENU items */
+    .sub-menu1 li,
+    .sub-menu2 li,
+    .sub-menu3 li{
+        list-style: none;
+        width: 15vw;
+        height: 3vh;
+        font-size: 1.5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    /* The subMENU hover */
+    .sub-menu1 li:hover,
+    .sub-menu2 li:hover,
+    .sub-menu3 li:hover{
+        background-color: rgba(255, 255, 255, 0.555);  
+        transform: translateY(0);
+        transition: all 0.2s ease;
+    }
+    
+    
+}
+
+
+/*############### > 992px ###################*/
 @media only screen and (min-width: 992px) {
 
 .main{
